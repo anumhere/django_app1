@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %} {% endblock %}</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <style>
+    .navbar-nav .link {
+      font-size: 20px;
+      color: #fff;
+    }
+    .navbar-nav .nav-item + .nav-item {
+      margin: 1px 50px;
+    }
+    .navbar-nav .link:hover {
+      color: #c4b402;
+      text-decoration: none;
+    }
+    .footer {
+      background-color: #f8f9fa;
+      padding: 20px 0;
+      text-align: center;
+    }
+    .footer a {
+      color: #333;
+      text-decoration: none;
+      margin: 0 10px;
+    }
+    .footer a:hover {
+      color: blue;
+    }
+    </style>
+</head>
+<body>
+<!-- header-->
+    {% include 'header.html' %}
+<!-- main content   -->
+    {% block content %}
+    {% endblock %}
+<!--footer-->
+    {% include 'footer.html'%}
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
